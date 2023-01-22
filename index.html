@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Number</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+
+<link rel="stylesheet" href="./style.css">
+<body>
+
+    <div class="container m-auto w-75">
+    <h1>
+        Hitesh Teach Solution
+        <br>
+        Palindrome Number Program In Javascript
+    </h1>
+</div>
+
+<div class="container pali m-auto w-50 ">
+  
+        <h3>Cheak Palindrome or Not:</h3>
+        <br>
+        <div class="col">
+            <input type="text" id="palindrome" class="form-control w-50 m-auto" placeholder="Enter any Number" aria-label="First name">
+          </div>
+        <br>
+        <br>
+        <div class="d-grid gap-2 col-2 mb-3 m-auto">
+        <button type="button" class="btn m-auto" onclick="palindrome()">Cheak</button>
+    </div>
+</div>
+   
+    
+    <script>
+        function palindrome() {
+            var a, b, no, temp = 0;
+            no = Number(document.getElementById("palindrome").value);
+            b = no;
+
+            while(no > 0) {
+                a = no % 10;
+                no = parseInt(no/10);
+                temp = temp*10+a;
+            }
+            if(temp == b) {
+                alert("Is Palindrome");
+            }
+            else {
+                alert("Is not Palindrome")
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
